@@ -5,7 +5,7 @@ def get_round_summary(round_number):
     r = requests.get(f"https://fantasy.formula1.com/feeds/drivers/{round_number}_en.json")
     return r.status_code, r.json()
 
-def write_round_summary(path, json):
+def write_json(path, json):
         with open(path, 'w') as f:
             json.dump(json, f)
 
